@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>230704_html_input태그</title>
+</head>
+<body>
+
+    <!-- inline 요소 -->
+    <input type="text" name="name" placeholder="성함을 알려주세요"></input>
+    <input type="phone" value="010-0000-000"/>
+    <input type="button" value="제출"/>
+    
+    <h2>password type</h2>
+    <input type="password" />
+
+    <h2>checkbox type</h2>
+    <input type="checkbox" name="hobby" value="야구">야구</input>
+    <input type="checkbox" name="hobby" value="축구">축구</input>
+   
+    <h2>radio type</h2>
+        <label>gender</label>
+            <input type="radio" name="gender" value="남자" id="남자" checked/>
+            <label for="남자">남자</label>
+            <input type="radio" name="gender" value="여자" id="여자"/>
+            <label for="여자">여자</label>
+        <br/>
+        
+        <label>favorite</label>
+            <input type="radio" name="favorite" value="야구" id="야구" checked/>
+            <label for="야구">야구</label>
+
+            <input type="radio" name="favorite" value="축구" id="축구"/>
+            <label for="축구">축구</label>
+
+            <input type="radio" name="favorite" value="줄넘기" id="줄넘기"/>
+            <label for="줄넘기">줄넘기</label>
+        
+    <h2>date type</h2>
+        <input type="date" name="birth" />
+        <input type="datetime" name="birth-time" />
+        <input type="datetime-local" name="birth-time-local" />
+
+     <!-- input 사용자에게 값을 입력 받을 때 사용 
+        * attributes
+            - type : input에 타입 정의
+                text (defalut) = text 입력값 받음
+                phone = 핸드폰 번호 입력 받음
+                button = 버튼
+                password = 비밀번호 입력을 받음
+                redio = 한개만 선택할 수 있는 컴포넌트
+                checked = 미리 체크
+                checkbox = 다수를 선택할 수 있는 컴포넌트
+                date = 날짜 입력을 받음
+                color = 색 입력 코드를 받음
+                range = 범위 입력을 받음(ex 0 ~ 100)
+                file = 파일 업로드
+                reset = 양식 초기화용 버튼
+
+            - name : 어떤 입력을 받을지에 대한 설명 (black 소통할 때 사용)
+            - placeholder : 사용자에게 입력에 대한 설명
+            - value : input에 value값을 미리 지정
+            - disabled : 입력 하지 못하게 설정
+            - readonly : 읽을수 있게만 설정
+    -->
+
+    <h2>select tag</h2>
+
+        <select name="select-name">
+            <option value="option1">예시1</option>
+            <option value="option2">예시2</option>
+            <option value="option3" selected>예시3</option>
+
+            <optgroup label="옵션 1~2">
+                <option value="option1">옵션1</option>
+                <option value="option2">옵션2</option>
+            </optgroup>
+
+            <optgroup label="옵션 3~4">
+                <option value="option1">옵션3</option>
+                <option value="option2">옵션4</option>
+            </optgroup>
+
+        </select>
+
+    <!--select 태그
+        
+        * attribute
+            value : option에 value값 설정
+            disable : 선택 하지 않게 함
+            selected : 선택하게 만듬
+    -->
+   
+    <div>
+        <input type="text" name="email"  value="ssss@spreatis.com" disabled/>
+    </div>
+
+</body>
+</html>
