@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_selector2(복합)</title>
+
+
+</head>
+<style>
+
+    /** 일치 선택자 Basic Combinator*/
+    span.orange {
+        color:orange;
+    }
+    li.orange.apple {
+        color: #000;
+    }
+    #liId.appe {
+        color: #000;
+    }
+
+    /** 자식 선택자 Child Combinator*/
+    
+    div > p { /** ( 하위 자식 관계만 선택 ) */
+        color: blue;
+    }
+    div > .orange { /** ( 하위 자식 관계만 선택 ) */
+        color: orange;
+    }
+    div > ul > .orange { /** ( 하위 자식의 자식 선택 ) */
+        color: aliceblue;
+    }
+
+    /** 하위 요소 선택자 Descendant Combinator ( 기준에 모든 선택 )*/
+    div .orange {
+        background-color: red;
+    }
+
+    /** 인접 형제 요소 선택자 Adjacent Sibling Combinator ( 인접 태그만 선택 가능 ) **/
+    ul + div {
+        color: red;
+    }
+
+    /** 일반 형제 선택자 General Sibling Combinator ( 선택자 다음에 형제 선택 ) **/
+    .apple ~ li {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+
+</style>
+
+<body>
+    
+    <div>
+        <ul>
+            <li id="liId" class="apple">사과</li>
+            <li>딸기</li>
+            <li class="orange">오랜지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_selector3(가상)</title>
+</head>
+
+<style>
+    /** 사용자의 행동에 따라 변화 */
+
+    /** hover 마우스를 올릴때 */
+    a:hover{
+        color: red;
+    }
+    button {
+        color: #3e3e3e;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    /** active 마우스를 클릭할 떄 */
+    a:active {
+        color: yellow;
+    }
+    button:active {
+        background-color: yellow;
+        color: black;
+    }
+    
+    /** focus 요소 클릭 했을 때 */
+    div > .name-input{
+        border: 1px solid #000;
+    }   
+    div > .name-input:focus {
+        background-color: orange;
+    }
+
+</style>
+
+<body>
+
+    <a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=css" target="_blank">네이버</a>
+    <button type="button">제출</button>
+    <div>
+        <input class="name-input" type="text" name="name" placeholder="이름을 입력하세요"/>
+    </div>
+    
+</body>
+</html>

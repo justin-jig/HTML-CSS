@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>230705_css_style</title>
+    <!-- style 링크 방식 -->
+    <link rel="styleSheet" src="../../css/230705_css/style.css">
+</head>
+<!-- style 내장 방식-->
+<style>
+    .main {
+        color: red;
+        font-size: 30px;
+        font-weight: 100;
+    }
+    .background {
+        background-color: black;
+    }
+
+</style>
+
+<body>
+    <div class="main"> 안녕 </div>
+    <div> 안녕하세요.</div>
+    <!-- style 인라인 방식-->
+    <p style="color: yellow;"> 안녕하세요 222</p>
+    <span>안녕하세요 333</span>
+    <!--
+        css ㅊ참조 방식
+        인라인 방식 > 내장 방식, 링크방식 (코드에 우선순위에 따라 다름)
+    -->
+    <div class="background"> background</div>
+
+
+</body>
+</html>

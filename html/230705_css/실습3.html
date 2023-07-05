@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>230705_css_실습3</title>
+</head>
+<style>
+    /** 야생의 사자만 선택, 배경을 빨간색 */
+    p.lion {
+        background-color: red;
+    }
+
+    /** 사파리 안의 사자만 선택 -배경을  */
+    ul > .lion {
+        background-color: greenyellow;
+    }
+    ul > .lion2 {
+        background-color: greenyellow;
+    }
+
+    /** 호랑이만 선택, 배경을 노란색  */
+    li.tiger {
+        background-color: yellow;
+    }
+
+    /**  사자를 전부 선택, 글자를 */
+    .lion {
+        color: sienna;
+    }
+    .lion2 {
+        color: sienna;
+    }
+
+   /**  동물원 안의 사자만 선택, 폰트를 두껍게*/
+    .zoo > .lion {
+        font-weight: bold;
+    }
+    ul > .lion  {
+        font-weight: bold;
+    }
+    ul > .lion2 {
+        font-weight: bold;
+    }
+    
+    /**  호랑이 뒤에 있는 팬더를 선택, 배경을 하늘색 */
+    li.tiger + li {
+        background-color: skyblue;
+    }
+
+    /**  사파리 사자 뒤에 있는 사육사를 모두 선택 배경을 오렌지 */
+    li.lion2 ~li {
+        background-color: orange;
+    }
+
+
+</style>
+<body>
+    <h1>복합선택자 사용 연습</h1>
+    <p>동물원에 왔어요</p>
+
+    <div class="zoo">
+        <ul>
+            <span>여긴 사파리!</span>
+            <li>곰</li>
+            <li class="tiger">호랑이</li>
+            <li>팬더</li>
+            <span class="lion">사자1</span>
+            <li class="lion2">사자2</li>
+            <li>사육사 lily</li>
+            <li>사육사 sean</li>
+        </ul>
+        <span class="lion">사파리 밖의 사자</span>
+    </div>
+    <hr />
+    <p class="lion">야생의 사자</p>
+</body>
+</html>
