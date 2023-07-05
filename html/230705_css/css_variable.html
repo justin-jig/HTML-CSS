@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_variable(속성)</title>
+</head>
+
+<style>
+    /** 속성값을 변수화 **/
+    :root {
+        --main-color : orange;
+        --main-bg-color : white;
+        --sub-color : rgb(248, 212, 144);
+        --font-size-big : 30px;
+    }
+    div {
+        color: var(--main-color);
+        font-size: var(--font-size-big);
+    }   
+
+</style>
+
+
+<body>
+        <div>안녕?</div>
+</body>
+</html>
