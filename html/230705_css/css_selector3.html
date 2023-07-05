@@ -7,7 +7,7 @@
 </head>
 
 <style>
-    /** 사용자의 행동에 따라 변화 */
+    /** 가상 클래스 선택자(Pseudo-Classes) **/
 
     /** hover 마우스를 올릴때 */
     a:hover{
@@ -30,7 +30,12 @@
         background-color: yellow;
         color: black;
     }
-    
+
+    /** visitied 방문했을 때 스타일링 */
+    a:visited {
+        color: green;
+    }
+
     /** focus 요소 클릭 했을 때 */
     div > .name-input{
         border: 1px solid #000;
@@ -38,6 +43,49 @@
     div > .name-input:focus {
         background-color: orange;
     }
+    
+    /** first-child  첫번째 요소 선택 */
+    .fruits span:first-child {
+        color: red;
+    }
+
+    .fruits div:first-child {
+        color: orange;
+    }
+
+    /** last-child  마지막 요소 선택 */
+    .fruits h3:last-child {
+        color: red;
+    }
+
+    /** nth-child (n)번째 요소 선택 */
+    .fruits *:nth-child(2n) { /** 짝수 */
+        background-color: green;
+        color: white;
+    }
+    .fruits *:nth-child(2n+1) { /** 홀수 */
+        background-color: yellow;
+        color: white;
+    }
+    .fruits *:nth-child(n+2) { 
+        background-color: yellow;
+        color: white;
+    }
+    /** not(Negation) (selector) 선택자를 제외한 나머지**/
+    .fruits *:not(span) { 
+        background-color: orange;
+    }
+
+    /** after, before  contenst 속성이 있어야 표시됨 **/
+
+    div.example::after {
+        content: "😊";
+    }
+    
+    div.example::before {
+        content: "😁";
+    }
+
 
 </style>
 
@@ -48,6 +96,23 @@
     <div>
         <input class="name-input" type="text" name="name" placeholder="이름을 입력하세요"/>
     </div>
-    
+
+    <hr/><br/><br/>
+
+    <div class="fruits">
+        <div>바나나</div>
+        <span>딸기</span>
+        <span>수박</span>
+        <div>오렌지</div>
+        <p>망고</p>
+        <h3>사과</h3>
+    </div>
+
+    <div class="example">
+        <!-- ::before에 해당하는 내용 -->
+        바로가기
+        <!-- ::after에 해당하는 내용 -->
+    </div>
+
 </body>
 </html>

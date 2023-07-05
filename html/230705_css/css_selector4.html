@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_selector4(속성)</title>
+</head>
+
+
+<style>
+
+    /** 
+        [속성이름 = 속성값] {}
+        [속성이름] {}
+    **/
+
+    [type=text] {
+        background-color: green;
+    }
+
+    [disabled] {
+        color: white;
+    }
+
+    [value] {
+        color: aqua;
+    }
+
+    *:not([disabled]) {
+        background-color: brown;
+    }
+
+
+</style>
+
+<body>
+    
+    <input type="text" value="HEROPY"/>
+    <input type="password" value="1234"/>
+    <input type="text" value="ABCD" disabled/>
+
+</body>
+</html>
