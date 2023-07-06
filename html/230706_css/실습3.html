@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>230706_css_실습3</title>
+</head>
+
+<style>
+    body {  
+        background-color: antiquewhite;
+        margin: 0;
+        --body-width : 100vw;
+        --body-height : 100vh;
+        --box-width : calc(var(--body-width) - 90vw);
+        width:  var(--body-width);
+        height: var(--body-height);
+    }
+    .box {
+        width:  var(--box-width);
+        height: var(--box-width);
+        line-height: var(--box-width);
+        margin: auto;
+        margin-top: calc(var(--body-height) - var(--box-width));
+        color: #fff;
+        background-color: blue;
+        text-align: center;
+    }
+</style>
+
+<body>
+    
+    <div class="box">KDT</div>
+
+</body>
+</html>

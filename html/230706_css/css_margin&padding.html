@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_margin&padding</title>
+</head>
+
+<!-- 
+    margin  : border에 기준으로 외부 영역, (0, auto, 단위(px,em,vm ...))
+    margin-top,margin-right,margin-top,margin-bottom,
+    margin: top,right,bottom,left, margin: (top,bttom),(left,right)
+    
+    padding : border에 기준으로 내부 영역, (0, 단위(px,em,vm ...))
+    padding-top,padding-right,padding-top,padding-bottom,
+    padding: top,right,bottom,left, padding: (top,bttom),(left,right)
+
+
+-->
+<style>
+
+    .block {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin-top: 100px;
+        margin-left: 100px;
+        color: white;
+        font-size: 2em;
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+
+    .inline {
+        background-color: blue;
+        color: white;
+        /** padding 값은 적용 되지만
+            margin top,bottm은 적용이 안된다.
+        */
+
+        margin-left: 20px;
+        padding: 30px;
+
+        
+    }
+
+</style>
+
+<body>
+    
+    <div class="block"> 안녕 </div>
+    <span class="inline">안녕??</span>
+</body>
+</html>

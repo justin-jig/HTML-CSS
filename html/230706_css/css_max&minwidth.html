@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_max&minwidth</title>
+</head>
+
+
+<!--
+    max-width,
+    min-width
+-->
+<style>
+
+    body {
+        margin: 0;
+    }
+
+    .mn-width {
+        background-color: red;
+        width: 90vw;
+        height: 100px;
+        /** 최대 넓이 */
+        /* max-width: 50px; */
+        /** 최소 넓이 */
+        /* min-width: 20px; */
+        margin: auto;
+        width: calc(100vw-200px);   
+        text-align: center;
+        line-height: 100px;
+    }
+
+</style>
+
+<body>
+
+    <div class="mn-width">안녕2</div>
+
+</body>
+</html>
