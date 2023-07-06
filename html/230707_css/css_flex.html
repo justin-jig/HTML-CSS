@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_flex</title>
+</head>
+
+<!--
+    flexbox (display : flex) 자식 요소들을 inline-block으로 변경
+    - flex-direction : row, colom, .... 자식요소들의 방향 (가로 세로 ...)
+    - justify-contens: coneter, left, right .... ( 가로 정렬)
+    - align-items : coneter, ..... (세로 정렬)
+    * 만약 flex-direction 방향을 바꾸면 가로 세로 적용법이 반대가 된다.
+
+    flexitem (flexbox 자식 요소)
+    
+-->
+
+<style>
+    .flex-box {
+        display: flex;
+        height: 500px;
+        background-color: aqua;
+        justify-content: center;
+        align-items: center;
+    }
+    .child-box {
+        width: 100px; height: 100px;
+        background-color: blue;
+        margin: 10px;
+    }
+
+</style>
+<body>
+
+    <div class="flex-box">
+        <div class="child-box">
+
+        </div>
+        <div class="child-box">
+            
+        </div>
+        <div class="child-box">
+            
+        </div>
+    </div>
+    
+</body>
+</html>

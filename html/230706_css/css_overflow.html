@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_overflow</title>
+</head>
+
+<!--
+    해당 영역 이외에 처리를 할때 사용
+    overflow : visible. hidden, scroll, auto
+-->
+
+<style>
+
+    :root{
+        margin: 0; padding: 0;
+    }
+
+    .box-wrap {
+        --box-width : 150px;
+        --box-height : 150px;
+        width: 100%; height: var(--box-height);
+    }
+
+    .box-wrap > .box1 {
+        display: inline-block;
+        width: var(--box-width); height: var(--box-height);
+        background-color: blue;    
+    } 
+    .box-wrap > .box2 {
+        display: inline-block;
+        width: var(--box-width); height: calc(var(--box-height)/2);
+        margin-bottom: calc(var(--box-height) * 0.25);
+        margin-left: -135px;
+        background-color: rgb(195, 126, 0);    
+    } 
+
+    .overflow-visible {
+        overflow: visible;
+    }
+
+    .overflow-hidden {
+        overflow: visible;
+    }
+
+    .overflow-scroll {
+        overflow: scroll;
+    }
+
+
+    .overflow-auto {
+        overflow: auto;
+    }
+  
+</style>
+
+<body>
+
+    <h5>overflow-visible</h5>
+    <div class="box-wrap overflow-visible">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+
+    <br/><br/>
+    
+    <h5>overflow-hidden</h5>
+    <div class="box-wrap overflow-hidden">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+
+    <br/><br/>
+
+    <h5>overflow-scroll</h5>
+    <div class="box-wrap overflow-scroll">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+
+    <br/><br/>
+
+    <h5>overflow-auto</h5>
+    <div class="box-wrap overflow-auto">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    
+</body>
+</html>

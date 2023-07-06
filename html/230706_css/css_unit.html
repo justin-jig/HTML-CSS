@@ -9,47 +9,88 @@
 <!--
     absolute unit
 
-    px = 
-    rem = 
-    em = 
-    %  = 
-    vw = 브라우저 넓이 기준으로
-    vh = 브라우저 높이 기준으로 
+    px = 컴퓨터 display 해상도 기준
+    rem = 최상위 element(html)값의 기준 font 관련해서 사용함
+    em = 상위(부모 element)값의 기준 font 관련해서 사용함
+    %  = 상위(부모 element)값의 기준
+    vw = 브라우저 viewport 넓이 기준으로
+    vh = 브라우저 viewport 높이 기준으로 
     calc() = 단위값 계산
 -->
 
 <style>
+
+    :root {
+        margin: 0; padding: 0;
+        font-size: 16px;
+        width: 1920px; height: 900px;
+    }
+
+    .box {
+        background-color: aqua;
+        border: 1px solid black;
+    }
     .px {
-
+        width: 300px;
+        height: 300px;
+        
     }
+    
     .rem {
-
+        width: 2rem; height: 2rem;
     }
-    .em {
 
+    .emParents {
+        width: 10px; height: 10px;
     }
+    .emParents > .em {
+        width: 2em; height: 2em;
+    }
+    
+
+    .perParents {
+        width: 100px; height: 100px;
+    }
+
     .per {
-
+        width: 30%; height: 30%;
     }
-    .vw {
 
+    .vwvh {
+        width: 50vw; height: 40vh;
     }    
-    .vh {
-
-    }
     .calc {
-
+        width:calc(50px - 10px); height: calc(50px - 10px); 
     }
 
 </style>
 
 <body>
 
-    <div class=""></div>
-    <div class=""></div>
-    <div class=""></div>
-    <div class=""></div>
-    <div class=""></div>
-    <div class=""></div>
+    <h5>px box</h5>
+    <div class="box px"></div>
+    <br/><br/>
+    <h5>rem box</h5>
+    <div class="box rem"></div>
+    <br/><br/>
+    <h5>em box</h5>
+    <div class="emParents">
+        <div class="box em"></div>
+    </div>
+    <br/><br/>
+
+    <h5>per box</h5>
+    <div class="perParents">
+        <div class="box per"></div>
+    </div>
+    <br/><br/>
+
+    <h5>vw vh box</h5>
+    <div class="box vwvh"></div>
+    <br/><br/>
+
+    <h5>calc box</h5>
+    <div class="box calc"></div>
+
 </body>
 </html>

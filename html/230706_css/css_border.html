@@ -7,7 +7,9 @@
 </head>
 
 <!--
-    border 
+    border : width, style, color
+    border-radius : 0, 0, 0, 0 || 0 , 0
+    box-sizing : content-box(요소에 컨텐츠 영역으로 계산) , border-box (요소에 padding + boder값으로 계산)
 -->
 <style>
 
@@ -34,8 +36,34 @@
         border-top-color: black;
         border-top-style: solid;
         border-top-width: 10px;
-
     }
+
+    .border-radius { 
+
+        border-radius: 20px  30px 40px 50px;
+    }
+
+
+    .box2 {
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+    }
+
+    .boxsizing-content {
+        box-sizing: content-box;
+        padding: 20px;
+        border: 10px solid #000;
+        margin: 20px;
+    }
+
+    .boxsizing-border {
+        box-sizing: border-box;
+        padding: 20px;
+        border: 10px solid #000;
+        margin: 20px;
+    }   
+
 
 </style>
 
@@ -44,6 +72,12 @@
     <div class="box border-1"></div>
     <br/><br/>
     <div class="box border-2"></div>
+    <br/><br/>
+    <div class="box border-radius"></div>
+    <br/><br/>
+    <div class="box2 boxsizing-content">ABC</div>
+    <br/><br/>
+    <div class="box2 boxsizing-border">ABC</div>
 
 </body>
 </html>
