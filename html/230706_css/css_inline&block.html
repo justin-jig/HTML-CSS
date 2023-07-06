@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_inlineElement</title>
+</head>
+<!--
+    inline
+    span,
+    * width,height 값을 가지지 않는다. 
+-->
+
+<!--
+    block
+    div,
+    * width 값을 가진다.
+    요소가 수직으로 쌓인다. 
+-->
+
+<style>
+    span {
+        display: inline;
+    }
+    div {
+        display: block;
+    }
+    .inline-block {
+        /** width, height값을 가지면서 컨텐츠 요소만큼 영역을 가지고 싶을때 
+            margin값 x
+        */
+        display: inline-block; 
+    }
+
+</style>
+
+<body>
+
+    <div style="background-color: black;">block</div>
+    <span style="background-color: yellow;">,ine</span>
+    <div style="background-color: blue;" class="inline-block">
+        inline-block
+    </div>
+</body>
+</html>

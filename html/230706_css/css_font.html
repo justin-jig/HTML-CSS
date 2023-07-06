@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_font</title>
+
+    <!-- link 방식 -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+
+</head>
+
+<!-- 
+    font-size : rem,em,px,%
+    line-height 
+    font-family : 글꼴1, "글꼴2"(특수문자 있을때), .. 글꼴계열;
+    text-align : left,center,right
+    text-decoration: none, underline, line-through ...
+ -->
+
+<style>
+    /**import 방식 */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    @font-face {
+        font-family: 'TTWanjudaedunsancheB';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+    
+    :root {
+        font-size: 20px;
+        /* font-family: 'Noto Sans KR', sans-serif; */
+      
+    }
+
+    div {
+        font-weight: 100;
+    }
+
+    main {
+        font-size: 20px;
+        text-align: center;
+    }
+    .font-px { 
+        font-size: 20px;
+ 
+    }
+    .font-em { /** 상의 요소(가장 가까운 부모 요소)의 배수 */
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+
+    .font-rem { /** 상의 요소(가장 상의 요소=html)의 배수 */
+        font-size: 1.5rem;
+        line-height: 2;
+        font-family: 'TTWanjudaedunsancheB', sans-serif;
+        text-align: left;
+        color: rgb(123, 0, 255);
+    }
+
+    .font-per {/** 상의 요소(가장 가까운 부모 요소)의 % */
+        font-size: 100%;
+        text-decoration: underline;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+</style>
+<body>
+    <main>
+        <div class="font-px">안녕하세요</div>
+        <div class="font-em">안녕하세요</div>
+        <div class="font-rem">안녕하세요</div>
+        <div class="font-per">안녕하세요</div>
+        <a href="실습1.html">a태그</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>230706_css_실습2</title>
+</head>
+
+<style>
+   
+    .box {
+        width: auto; height: 200px;
+        background-color: orange;
+        font-size: 14px;
+    }
+    .box > div {
+        display:  inline-block;
+        width: 200px; height: 100px;
+    }
+    .box *:nth-child(1) {
+        background-color: skyblue;
+        
+    }
+    .box *:nth-child(2) {
+        background-color: green;
+        margin: 0 30px;
+    }
+    .box *:nth-child(3) {
+        background-color: red;
+    }
+
+</style>
+
+<body>
+
+    <div class="box">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>Javascript</div>
+    </div>
+    
+</body>
+</html>
