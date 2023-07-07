@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_postion</title>
+</head>
+
+<!--
+    postion : static , relative, absolute, relative, fixed
+    black요소를 곂치게 하거나 위치를 변경할때 주로 사용
+
+    relative : 사용 element 위치 기준 
+    absolte : 부모 요소 위치 기준
+
+    요소 쌓임 순서 (stack order)
+    z-index : auto, 숫자 (요소의 쌓임 정도를 지정)
+        - 해당 element는 부모보다 순서가 낮을 수 없다.    
+        - postion 속성값으로 absolute 사용해야한다.
+-->
+
+<style>
+    body {
+        margin: 0;
+    }
+    div {
+        width: 100px; height: 100px; background-color: red;
+        margin-top: 0;
+    }
+    .relative {
+        position: relative;
+    }
+    .absolute {
+        position: absolute;
+    }
+
+    .r-1 {
+        /** 위치값 변경 */
+        background-color: red;
+        left: 50px;
+        top: 50px;
+        bottom: 50px;
+        right: 50px;
+    }
+
+    .r-2 {
+        background-color: blue;
+        bottom: 50px;
+    }
+
+    .r-3 {
+        background-color: yellow;
+        right: -10px;
+    }
+
+
+    .absolute-parent {
+        position: relative;
+        height: 200px;
+        background-color: aqua;
+    }
+    .a-1 {
+        background-color: orange;
+        /* top: 30px; */
+        left: 20px;
+        bottom: 0;
+    }
+
+    .fixed {   
+        position: fixed;
+        background-color: aqua;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 50px;
+    }
+
+
+    .container-zindex {
+        position: relative;
+        background-color: black;
+        width: 100%; height: 400px;
+        z-index: 999;
+    
+    }
+
+    .container-zindex > .item {
+        position: absolute;
+        width: 100px; height: 100px;
+    }
+
+    .container-zindex > .one {
+        background-color: red;
+        top: 20px; left: 20px;
+        z-index: 1;
+    }
+    .container-zindex > .two {
+        background-color: orange;
+        top: 40px; left: 40px;
+        z-index: 2;
+    }
+    .container-zindex > .three {
+        background-color: yellow;
+        top: 60px; left: 60px;
+        z-index: 3;
+    }
+
+</style>
+
+<body>
+
+    <h5> relative </h5>
+    <div class="relative r-1"></div>
+    <div class="relative r-2"></div>
+    <div class="relative r-3"></div>    
+    <br/>
+    <hr/>
+    <br/><br/>
+    
+    <h5> absolute </h5>
+    <div class="absolute-parent">
+        <div class="absolute"></div>
+        <div class="absolute a-1"></div>
+    </div>
+    
+    <br/>
+    <hr/>
+    <br/><br/>
+
+    <h5> fixed </h5>
+    <div class="fixed"></div>
+
+    <br/>
+    <hr/>
+    <br/><br/>
+    
+    <h5> z-index </h5>
+    <div class="container-zindex">
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+
+    </div>
+
+</body>
+</html>

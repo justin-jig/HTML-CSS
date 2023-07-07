@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>230707 실습4</title>
+</head>
+
+<style>
+    body {
+        margin: 0; padding: 0;
+    }
+
+    section {
+        width: 100%; height: auto;
+    }
+
+    section > div {
+        width: 800px; height: 500px; background-color: skyblue;
+        border: 1px solid #000;
+        background-image: url('../../img/cat.png');
+        
+    }
+
+    section > .lion1 {
+        background-position: 50%;
+        background-repeat: repeat-x;
+    }
+    
+    section > .lion2 {
+        /** 이미지 크기에 짧은 축으로 맞춤 contain*/
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    section > .lion3 {
+
+        /** 이미지 크기에 긴 축으로 맞춤 contain*/
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+</style>
+
+<body>
+    
+    <section>
+        <div class="lion1"></div>
+        <div class="lion2"></div>
+        <div class="lion3"></div>
+    </section>
+
+</body>
+</html>
