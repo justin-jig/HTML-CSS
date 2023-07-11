@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230711실습3</title>
+</head>
+
+<script>
+    let num1 = Number(prompt('숫자1를 입력해주세요.'));
+    let num2 = Number(prompt('숫자2를 입력해주세요.'));
+
+    const add = () => {
+        alert(`숫자1,숫자2 덧셈은 :::  ${Number(num1) + Number(num2)}`);
+    }
+
+    const sub = () => {
+        alert(`숫자1,숫자2 뺄셈은 :::  ${num1-num2}`);
+    }
+
+    const mul = () => {
+        alert( `숫자1,숫자2 곱셈은 ::: ${num1*num2} `);
+    }
+
+    const divide = () => {
+        alert( `숫자1,숫자2 나누기 ::: ${num1/num2} `);
+    } 
+
+</script>
+
+<body>
+
+    <button onclick="add()"> 더하기 </button>
+    <button onclick="sub()"> 빼기 </button>
+    <button onclick="mul()"> 곱하기 </button>
+    <button onclick="divide()"> 나누기 </button>
+    
+</body>
+</html>
