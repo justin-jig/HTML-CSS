@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230711실습9</title>
+</head>
+
+    <script>
+       
+        let arr = [];
+
+        let rtn1 = 0;
+        let rtn2 = 0;
+        let rtn3 = 0;
+        
+        for (let i=0; i<100; i++) {
+            arr.push(i+1);
+        }
+
+        /** for문 */
+        for (let i=0; i<arr.length; i++) {
+             rtn1 += arr[i]; 
+        }
+
+        /** for of 문 */
+        for (let value of arr) {
+            rtn2 += value;
+        }
+
+        /** forEach */
+        arr.forEach((value) => {
+            rtn3 += value;
+        })
+
+        console.log('for문 결과 :::', rtn1);
+        console.log('for of문 결과 :::', rtn2);
+        console.log('forEach 결과 :::', rtn3s);
+
+
+    </script>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230712실습2</title>
+</head>
+
+<style>
+
+    .input-box {
+        width: 70%; height: 150px;
+    }
+    .input-box > input {
+        width: 100%; height: 20px;
+    }
+
+    .button-box {
+        width: 100%; height: 50px;
+
+    }
+
+    .table-box {
+        width: 70%;
+    }
+
+    .table-box table {  
+        width: 100%;
+        border: 1px solid #000;
+        border-collapse: collapse;
+    }
+
+    .table-box > table > td,tr {
+        border: 1px solid #000;
+        text-align: center;
+    }
+
+</style>
+
+<script>
+
+
+    function guestAdd () {
+
+        let create = document.getElementById('create');
+        let content = document.getElementById('content');
+        let tablebody = document.getElementById('table_box_table_tbody');
+
+        if (create.value.trim() === "") { 
+            return alert('작성자를 입력해주세요.');
+        }
+        if (content.value.trim() === "") { 
+            return alert('내용을 입력해주세요.');
+        }
+        
+        let now = new Date();
+        let nowYear = now.getFullYear();
+        let nowMoth = (now.getMonth() + 1) >= 10 ? (now.getMonth() + 1) : '0' + (now.getMonth() + 1);
+        let nowdate =  (now.getDate() >= 10 ? now.getDate() : '0' + now.getDate() ) ;
+        let nowHours = now.getHours(); // 시
+        let nowMinutes = now.getMinutes();  // 분
+        let dateCreated = `${nowYear}-${nowMoth}-${nowdate} ${nowHours} : ${nowMinutes}`
+
+        let trCreate = document.createElement('tr');
+        trCreate.innerHTML = `<td>${tablebody.children.length +1}</td> 
+                             <td>${create.value}</td> 
+                             <td>${content.value}</td> 
+                             <td>${dateCreated}</td>`
+        tablebody.appendChild(trCreate);
+
+        create.value = "";
+        content.value = "";
+
+    }
+
+    function reset () {
+        let create = document.getElementById('create').value = "";
+        let content = document.getElementById('content'). value = "";
+        let tablebody = document.getElementById('table_box_table_tbody').innerText = ""
+    }
+
+
+</script>
+
+<body>
+    <div class="input-box">
+
+        <h5>방명록입니다. </h5>
+        <label>작성자</label>
+        <input type="text" id="create" name="create"/><br/>
+        <label>내용</label>
+        <input type="text" id="content" name="content"/><br/>
+    </div>
+
+    <div class="button-box">
+        <button onclick="guestAdd()">작성</button> 
+        <button onclick="reset()">초기화</button>
+    </div>
+
+    <div class="table-box">
+        <table id ="table_box_table">
+            
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>작성자</th>
+                    <th>내용</th>
+                    <th>작성일</th>
+                </tr>
+            </thead>
+            
+            <tbody id="table_box_table_tbody">
+            </tbody>
+      
+        </table>
+    </div>
+
+</body>
+</html>

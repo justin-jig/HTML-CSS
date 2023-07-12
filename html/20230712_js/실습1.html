@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230712실습1</title>
+</head>
+
+<script>
+
+    function cal () {
+
+        let value1 = document.getElementById('value1');
+        let value2 = document.getElementById('value2');
+        let operator = document.getElementById('operator');
+        let result = document.getElementById('result');
+        
+        if (isNaN(value1.value)) {
+            value1.value = "";
+            return alert('값1에 숫자를 입력해주세요.')
+        } else if (isNaN(value2.value)){
+            value2.value = "";
+            return alert('값2에 숫자를 입력해주세요.')
+        }
+
+        switch (operator.value.trim()) {
+            case '+':
+            result.value = (Number(value1.value) + Number(value2.value))
+            break;
+            case '*':
+            result.value = (Number(value1.value) * Number(value2.value))
+            break;
+            case '/':
+            result.value = (Number(value1.value) / Number(value2.value))
+            break;
+            case '%':
+            result.value = (Number(value1.value) % Number(value2.value))
+            break;
+
+            default : alert('연산자는 +, -, *, /, % 만 가능합니다.'), operator.value = ""
+        }
+    }
+
+    function reset () {
+        let value1 = document.getElementById('value1');
+        let value2 = document.getElementById('value2');
+        let operator = document.getElementById('operator');
+        let result = document.getElementById('result');
+        value1.value = "";
+        value2.value = "";
+        operator.value = "";
+        result.value = "";
+    }
+
+</script>
+
+
+<body>
+    <div style="margin-bottom: 20px;">
+        <label>값 1:</label>
+        <input  type="text" id="value1" name="value1"/><br/>
+        <label>값 2:</label>
+        <input type="text" id="value2" name="value2"/><br/>
+        <label>연산자:</label>
+        <input type="text" id="operator" name="operator" placeholder=" + , -, * , / "/><br/>
+        <label>결과:</label>
+        <input type="text" id="result" name="result" disabled/>
+    </div>
+    <button onclick="cal()">계산기하기</button> 
+    <button onclick="reset()">초기화</button>
+</body>
+</html>

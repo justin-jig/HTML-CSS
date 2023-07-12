@@ -20,7 +20,7 @@ const forLoop = () => {
     let number = 5;
     let rtn = 0;
     
-    for ( let i = 1; i <= number; i++ ) {1
+    for ( let i = 1; i <= number; i++ ) {
         rtn +=i;
     }
     console.log(rtn);
@@ -136,10 +136,18 @@ const forInLoop = () => {
 
 /** forEach */
 const forEachLoop = () => {
+    
     let fruits = ["apple", "banana", "orange", "grape"];
-    fruits.forEach((value) => {
-        console.log(value)
+
+    fruits.forEach(function(data, index, arr){
+        console.log("data :", data);
+        console.log("index :", index);
+        console.log("arr :", arr);
+    })
+
+    fruits.forEach((data, index, arr) => {
+        console.log("data :", data);
+        console.log("index :", index);
+        console.log("arr :", arr);
     })
 }
-
-

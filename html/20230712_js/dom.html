@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230712_dom</title>
+</head>
+
+<style>
+
+    .box {
+        width: 100px; height: 100px;
+
+    }
+    .red {
+        background-color: red;
+    }
+    .orange {
+        background-color: orange;
+    }
+    .yellow {
+        background-color: yellow;
+    }
+    .green {
+        background-color: green;
+    }
+
+</style>
+
+<script>
+
+    /** button func */
+    function redToggle () {
+        let redBox = document.getElementById('red');
+        // if(redBox.classList.contains("red"))
+        //     redBox.classList.remove("red")
+        // else {
+        //     redBox.classList.add("red")
+        // }
+        redBox.classList.toggle("red");
+    }
+
+    function elementCreate () {
+
+        let container  = document.querySelector('.container');
+        let createBox = document.createElement("div");
+            createBox.className = "box green";
+        // container.append(createBox) 
+        // 부모요소(container)에 마지막 자식으로 괄호 안의 요소를 추가
+        container.appendChild(createBox); 
+        // container.append("<div>안녕?</div>")
+        // append는 매개변수로 문자열과 노드객체를 모두 받을 수 있다.
+        // appendChild 매개변수로 노드객체만 받을 수 있다.
+    }
+
+    function removeBox () {
+        let orangeBox = document.getElementById('orange');
+        let container  = document.querySelector('.container');
+
+        orangeBox.remove();
+        container.removeChild(orangeBox);
+    }
+
+</script>
+
+
+<body>  
+
+    <div class="container">
+        <div id="red" class="box red">빨간 상자</div>
+        <div id="orange" class="box orange"></div>
+        <div class="box yellow"></div>
+    </div>
+    
+    <button type="button" onclick="redToggle()">깜빡 깜빡</button>
+    <button type="button" onclick="elementCreate()">요소 추가</button>
+    <button type="button" onclick="elementCreate()">요소 삭제</button>
+    <input type="text" name="password"/>
+
+     <!-- dom 객체 -->
+     <script src="../../js/20230712/document.js"></script>
+</body>
+</html>
