@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230713_jqurey 실습1</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body { margin: 0; padding: 0;}
+    .container {
+        width: 350px; margin: auto; box-sizing: border-box;
+        padding-top: 50px;
+    }
+    .container > .image-box {
+        width: 350px; height: 350px; border: 10px solid orange;
+        border-radius: 15%;
+        margin-bottom: 10px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: relative;
+    }   
+
+    .container > .image-box > .default{
+        position: absolute;  text-align: center;
+        top: 50%; left: 50%; transform: translate(-50%,-50%);
+        font-size: 30px; font-weight: bold;
+    }
+    .container > .image-box > .default::before{
+        content: "과일"; background: yellow;
+
+    }
+    .container > .btn-box {
+        text-align: center;
+    }
+    .container > .btn-box > button {
+        background-color: #151515; cursor: pointer;
+        color: #fff; text-align: center;
+    }
+</style>
+
+<script>    
+
+    function imageChange(kind) {
+
+        if ($('div').children('.default')[0]) {
+            $('.default').remove();
+        }
+        switch(kind) {
+            case  'apple':
+                $('.image-box').css('background-image', 'url("../../img/apple.jpg")') 
+            break;
+            case  'banana':
+                $('.image-box').css('background-image', 'url("../../img/banana.jpg")') 
+            break;
+            case  'grape':
+                $('.image-box').css('background-image', 'url("../../img/grape.jpg")') 
+            break;
+            case  'peach':
+                $('.image-box').css('background-image', 'url("../../img/peach.jpg")') 
+            break;
+            default : $('.image-box').css('background-image', 'url("../../img/apple.jpg")') 
+        }
+    }
+
+</script>
+
+<body>
+    <div class="container">
+        <div class="image-box">
+            <div class="default">을<br/>골라볼게요</div>
+        </div>
+        <div class="btn-box">
+            <button type="button" onclick="imageChange('apple')">사과</button>
+            <button type="button" onclick="imageChange('banana')">바나나</button>
+            <button type="button" onclick="imageChange('grape')">포도</button>
+            <button type="button" onclick="imageChange('peach')">복숭아</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
