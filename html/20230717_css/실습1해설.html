@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+
+    body {
+        margin: 0;
+    }
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+     
+    }
+    header {
+        background-color: #F94144;
+        grid-column: auto / span 4;
+    }
+
+    .aside1 {
+        background-color: #F3722c;
+        grid-row: auto / span 2;
+    }
+
+    .section1{
+        background-color: #F9C74F;
+        grid-column: auto / span 2;
+    }
+
+    .section2{
+        background-color: #43AA8B;
+        grid-row: auto / span 2;
+    }
+
+    .section3 {
+        background-color: #F8961E;
+    }
+
+    .aside2 {
+        background-color: #90BE6D;
+    }
+
+    footer {
+        background-color: #4444FF;
+        grid-column: auto / span 4;
+    }
+
+</style>
+<body>
+
+    <div class="container">
+        <header> #F94144 </header>
+        <aside class="aside1">#43AA8B</aside>
+        <section class="section1"> #F9C74F </section>
+        <section class="section2"> #F8961E </section>
+        <section class="section3"> #90BE6D </section>
+        <aside class="aside2">#43AA8B</aside>
+        <footer>#4444FF</footer>
+    </div>
+
+    
+</body>
+</html>

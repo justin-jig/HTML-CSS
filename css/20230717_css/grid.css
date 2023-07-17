@@ -1,0 +1,122 @@
+
+
+
+.container {
+    display: grid;
+    height: 500px;
+    /**
+        grid-template-columns : 명시적 행(Track)의 크기를 정의
+        grid-template-columns : 명시적 열(Track)의 크기를 정의
+        minmax(최소,최대);
+        repeat(반복수, 크기)
+        fr (fraction, 공간 비율)
+    */
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    /** row gap : 행과 행 사이의 간격(Line)을 정의 */
+    /* row-gap: 20px; */
+    /** column-gap(grid-column-gap) : 열과 열 사이의 간격(Line)을 정의*/
+    /* column-gap: 20px; */
+    /* gap: 20px; */
+
+
+    /** 요소(상위=부모=container 요소)가 존재할 수있는 영역 내에서 정렬 */
+
+    /** justify-content : 그리드 콘텐츠를 수평(행 축) 정렬 */
+    /* justify-content : center; */
+    /** align-content : 그리드 콘텐츠(Grid Contents)를 수직(열 축) 정렬 */
+    /* align-content: center; */
+    /** place-content align-content와 justify-content의 단축 속성 */
+    /* place-content: center; */
+
+      
+    /** 요소(자식 요소)가 존재할 수있는 영역 내에서 정렬 */
+ 
+    /** justify-items : 그리드 아이템들을 수평(행 축) 정렬 */
+    /* justify-items : center;  */
+ 
+    /**align-items : 그리드 아이템(Items)들을 수직(열 축) 정렬 */
+    /* align-items: center; */
+
+    /** place-items:  align-items와 justify-items의 단축 속성 */
+    /* place-items: center; */
+
+
+    /** 
+        grid-row : start/end (열을 합친다.)
+        grid-row-start
+        grid-row-end
+
+        grid-colum : start/end  ( 행을 합친다. )
+        grid-colum-start
+        grid-colum-end
+    */
+
+
+    /** 
+         justify-self:  item 한 개에 대한 좌,우 정렬 속성
+        align-self: item 한 개에 대한 상,하 정렬 속성;
+        place-self: center; 좌,우,상,하 정렬
+    
+    */
+
+    /**  order
+        - order: 0 (default)
+        - 처음에는 모두 order 0의 값을 가지고 있기 때문에 특정 item에 0 이외의 다른
+        값을 주면 재배치됨
+        - 작은 수일수록 먼저 배치
+        - 음수도 가능
+    */
+
+    /** z-index
+        - 일반적으로 쓰이는(position 과 함께 쓰이는) z-index 속성과 같음
+    */
+
+    /** 
+        grid-template-areas, grid-areas 
+        영역 이름을 설정
+    */
+
+    grid-template-areas: 
+        'header header header' 
+        'nav main aside'
+        'footer footer footer';
+}
+
+.container > .item {
+    /* width: 100px; height: 100px; */
+}
+
+.red { background-color: red; 
+    /* grid-column: 1 / 4; */
+    /* grid-column: 1 /3 span; */
+    /* place-self: center; */
+    grid-area: header;
+}
+.orange { 
+    background-color: orange; 
+    /* grid-row: auto / span 2; */
+    /* place-self: center; */
+    grid-area: nav;
+}
+.yellow { 
+    background-color: yellow;
+    /* justify-self: center;
+    align-self: center;
+    place-self: center; */
+    grid-area: main;
+}
+.green { background-color: green;
+    /* z-index: 3; */
+    grid-area: aside;
+}
+.blue {background-color: blue;
+    grid-area: footer;
+}
+.navy {background-color: navy;
+
+    grid-area: footer;
+}
+.purple {background-color: purple;
+    grid-area: footer;
+}
