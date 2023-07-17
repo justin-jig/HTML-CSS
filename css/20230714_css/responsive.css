@@ -1,0 +1,48 @@
+/**
+    @media 유형(screen, all ... ) and ( 크기 조건);
+    유형 : screen, print, all
+    크기 조건 : max,min-widht / min, max-height
+    max-width: 오른쪽에 나온 숫자 값 "이하" 일떄
+    
+*/
+body {
+    background-color: indianred;
+    color: white;
+}
+.box {
+    font-size: 100px;
+}
+/* @media 유형 and (크기 조건) { } */
+/* 유형 : screen, print, all */
+/* 크기 조건 : max, min-width / max, min-height */
+/* max-width : 오른쪽에 나온 숫자 값 "이하"일 때 */
+/* min-width : 오른쪽에 나온 숫자 값 "이상"일 때 */
+
+/* orientation = landscape, Portait */
+@media screen and (max-width: 700px){
+    body {
+        background-color: green;
+        /* font-family: serif; */
+    }
+}
+
+@media screen and (max-width: 500px){
+    body {
+        background-color: yellow;
+    }
+}
+
+@media screen and (max-width: 300px){
+    body {
+        background-color: black;
+    }
+}
+
+@media print {
+    .box {
+        display: none;
+    }
+}
+@media screen and (orientation: landscape) {
+    
+}

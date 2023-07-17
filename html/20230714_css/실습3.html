@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습3</title>
+</head>
+<style>
+    body { margin: 0; padding: 0;}
+    .container {
+        width: 100%; 
+    }
+    .container .box {
+        width: 100px; height: 100px;
+      
+    }
+
+    @media screen and (min-width: 700px) {
+        .container {
+            display: flex;
+        }
+        .container .box {
+            background-color:black;
+            margin-right: 10px;
+        }
+        
+    }
+
+    @media screen and (max-width: 700px){
+
+        .container {
+            display: block;
+        }
+        .container .box {
+            background-color:skyblue;
+            margin-right:0; margin-bottom: 10px;
+        }
+    }
+
+
+</style>
+<body>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

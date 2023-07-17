@@ -66,7 +66,7 @@ const jqueryElement = () => {
      // $('div').prevAll('선택자')
      $('div').children();// 선택된 요소의 자식 요소 모두 선택
 }   
-queryElement();
+// jqueryElement();
 
 /** class 조작 */
 const jqueryClass = () => {
@@ -78,7 +78,52 @@ const jqueryClass = () => {
 }
 //jqueryClass();
 
+/** 이벤트 리스너 */
+const jqueryEventListenr = () => {
+    
+    /** 로딩 이벤트 ready, $() */
+    
+    $(window).ready(function(){ // 페이지 로드 후에 실행하는 함수
 
+    }); 
+    $(function(){
+
+    })
+
+    /** mouse Event */
+    // $().on("click", function(){ })
+    // $().on("mouseover", function(){ })
+    // $().on("mouseout", function(){ })
+    // $().on("mouseup", function(){ })
+    // $().on("mousedown", function(){ })
+    $('.btn2').click(function(){ // 클릭
+        alert('클릭');
+    })
+    $('.btn2').mouseover(function(){ // 마우스 over 마우스 올라가는 순간 1번
+
+    })
+    $('.btn2').hover(function(){ // 마우스 over 마우스 올라가 있는 동안
+    })
+
+    $('.container').scroll(function(){ // 스크롤 이벤트
+        console.log('scroll')
+    })
+
+
+    $('input').keydown(function(e){ // keydown 키를 누르는 순간에만 발생
+        console.log(e.key === 'Enter');
+    })
+
+    $('input').keyup(function(e){ // keyup 키를 눌렀다가 떼는 순간
+        console.log(e.key === 'Enter');
+    })
+
+    $('input').keyup((e) => {
+
+    })
+}
+
+jqueryEventListenr();
 
 
 

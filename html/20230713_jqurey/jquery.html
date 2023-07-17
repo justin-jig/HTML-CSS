@@ -8,9 +8,13 @@
 </head>
 
 <style>
+
+    .container {
+        width: 300px; height: 300px; overflow-y: scroll;
+    }
     .box {
-        width: 100px; height: 100px;
-        transition: all 1s;
+        width: 100px; height: 2000px; 
+        transition: all 1s; 
     }
     .red {
         background-color: red;
@@ -18,9 +22,12 @@
 </style>
 
 <body>
-    <input type="text" name="id" id="id"></input>
-    <button type="button" onclick="submitt()">클릭2</button>
-    <div class="box red"></div>
+    <div class="container">
+        <input type="text" name="id" id="id"></input>
+        <button type="button" onclick="submitt()">클릭2</button>
+        <div class="box red"></div>
+        <button type="button" class="btn2" id="btn2">클릭3</button>
+    </div>
     <script src="../../jquery/index.js"></script>
 </body>
 </html>
