@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
     res.render('dynamicForm');
 })
 
+/** ajax */
 app.get('/ajax', (req, res) => {
     console.log('back', req.query);
     res.send(req.query);
@@ -24,12 +25,23 @@ app.post('/ajax', (req, res) => {
     res.send(req.body);
 })
 
+/** axios */
 app.get('/axios', (req, res) => {
     console.log('back', req.query);
     res.send(req.query);
 })
 
 app.post('/axios', (req, res) => {
+    console.log('back', req.body);
+    res.send(req.body);
+})
+
+/** fetch */
+app.get('/fetch', (req, res) => {
+    console.log('back', req.query);
+    res.send(req.query);
+})
+app.post('/fetch', (req, res) => {
     console.log('back', req.body);
     res.send(req.body);
 })

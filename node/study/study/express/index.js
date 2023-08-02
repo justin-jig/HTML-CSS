@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PROT = 8000;
+const PORT = 8000;
 
 // express get 함수
 app.get('/', (req, res) => {
@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 })
 
 /** 서버 열어주는 함수 */
-app.listen(PROT, () => {
-    console.log(`http://localhost:${PROT}`);
+app.listen(PORT, () => {
+    console.log(`http://localhost:${PORT}`);
 })
 
