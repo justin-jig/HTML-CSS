@@ -6,7 +6,6 @@ const path = require('path'); // 경로 설정 제어
 
 
 /** express body paser 설정 */
-
 app.use(express.urlencoded({extended:true})) // url 인코딩 방식 설정
 app.use(express.json()); // json 방식 설정
 
@@ -26,7 +25,7 @@ const fileuploadDetail = multer({
         filename (req, file, done) { // 파일name에 대한 설정
             const ext = path.extname(file.originalname); // 파일명 확장자 제외한 파일명 삭제
          
-            done(null, path.basename(file.originalname, ext)+ Date.now() + ext);// 파일명 설정
+            done(null, req.body.id+ Date.now() + ext);// 파일명 설정
         }
 
     }),
