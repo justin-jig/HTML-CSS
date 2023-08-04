@@ -55,9 +55,12 @@ app.get('/comment:id', (req, res) => {
     console.log(req.params.id);
     const commentId = req.params.id;
     console.log();
-
     res.render('comment', {commentInfo : comments[commentId - 1]});
+})
 
+//* 맨 마지막에 선언
+app.get( '*' , (req,res) => {
+    res.render('404');
 })
 
 app.listen(PORT, () => {
