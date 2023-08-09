@@ -1,13 +1,7 @@
-# KDT-WEB-9
-포스코x코딩은 웹 개발자 양성 부트캠프 9기 node 코드
+# KDT-WEB-9 node
 
-1. 20230727
- - http (createServer, file)
+cjs = commonjs 기준으로 작성
+mjs = modulejs 기준으로 작성
 
-2. 20230728
- - express
- - template engin 
- - middleware
-
-작성자: 정인근 justin   
-최초 작성일: 23.07.27
+사용방법
+각 폴더 README.md 참고
