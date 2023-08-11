@@ -1,11 +1,9 @@
 {
-  "name": "practice_es6",
+  "name": "backend_project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "20230809-01": "node ./practice/20230809/01/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
