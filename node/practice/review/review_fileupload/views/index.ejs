@@ -32,9 +32,7 @@
     <script>
 
         async function fileFormPost (event) {
-            console.log('여기22');
             event.preventDefault(); 
-      
             const file = document.querySelector('#file');
             const formData = new FormData();
 
@@ -43,25 +41,28 @@
             }
 
             const resultbox  = document.querySelector('#resultbox');
-            const fileUploadRes = await axios({
-                method:'POST',
-                url :'/upload/array',
-                data : formData,
-                header : {
-                    'Content-Type' : 'mutipart-from-data'
-                }
-            })
 
-            if (fileUploadRes.data.files.length) {
+            try {
+                const fileUploadRes = await axios({
+                    method:'POST',
+                    url :'/upload/array',
+                    data : formData,
+                    header : {
+                        'Content-Type' : 'mutipart-from-data'
+                    }
+                })
 
-                let renderHtml ='';
-                for ( let i = 0; i < fileUploadRes.data.files.length; i++) { 
-                    renderHtml += `<img src=${fileUploadRes.data.files[i].path} />`
-                }
-                resultbox.innerHTML = renderHtml
-            } 
+                if (fileUploadRes.data.files.length) {
 
-
+                    let renderHtml ='';
+                    for ( let i = 0; i < fileUploadRes.data.files.length; i++) { 
+                        renderHtml += `<img src=${fileUploadRes.data.files[i].path} />`
+                    }
+                    resultbox.innerHTML = renderHtml
+                } 
+            } catch (err) {
+                console.log(err);
+            }
         }
     </script>
 </body>
