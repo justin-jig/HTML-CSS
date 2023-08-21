@@ -1,13 +1,10 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 
-
-
 const app = express();
 const PORT = 8000;
 
 /**view engine */
-
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
@@ -31,6 +28,7 @@ const cookieConfig = {
      *  secure : 웹브라우저와 웹서버가 https:로 통신하는 경우만 쿠기를 서버에 전송
      *  signed : 쿠키의 암호화 결정 (req : signedCookies 객체에 들어 있음)
      */
+    expries : true,
 }
 
 app.get('/', (req, res) => {

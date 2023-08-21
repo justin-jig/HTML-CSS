@@ -37,14 +37,10 @@ app.get('/name', (req, res) => {
 })
 
 app.get('/destroy', (req, res) => {
-
     req.session.destroy(() => {
         res.redirect('/name');
     })
-
 })
-
-
 
 app.listen(PORT, () => {
     console.log(`localhost:${PORT}`);
