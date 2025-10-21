@@ -1,7 +1,0 @@
-
-
-const studentRoute = (router) => {
-
-    return ('');
-}
-
