@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 캔버스태그</title>
+<style>
+#cvs{border:1px solid #000;}
+</style>
+</head>
+
+<body>
+<header>
+	<h1>HTML5 캔버스태그</h1>
+    <nav></nav>  
+</header>
+<section>
+	<article>
+    	<h1>canvas 태그</h1>
+        <canvas id="cvs" width="300" height="300"></canvas>
+    	<script>
+			var wpcanvas = document.getElementById('cvs');
+			var wpcontext = wpcanvas.getContext('2d');
+			
+			wpcontext.fillRect(20,20,100,100);
+			wpcontext.strokeRect(20,160,100,100);
+			wpcontext.fillRect(160,20,100,100);
+			wpcontext.strokeRect(190,50,40,40);			
+		</script>
+    </article>
+</section>
+<footer>
+</footer>
+
+</body>
+
+</html>

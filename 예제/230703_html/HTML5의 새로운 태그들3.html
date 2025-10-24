@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 - 새로운 태그들</title>
+</head>
+
+<body>
+<header>
+	<h1>HTML5 새롭게 추가된 태그들</h1>
+<nav>
+	<ul>
+    	<li><a href="#">시멘틱태그</a></li>
+        <li><a href="#">그래픽 멀티미디어 태그</a></li>
+        <li><a href="#">새로운 폼 태그</a></li>
+        <li><a href="#">API</a></li>
+    </ul>    
+</nav>
+</header>
+<section>
+	<article>
+    	<h1>새로운 타입 속성</h1>
+        <h2>color 타입</h2>
+        <form action="#" method="get" name="newtype">
+        	<label>색상 선택</label>
+            <input type="color" name="uColor">
+            <br>
+            <input type="submit" value="전송">
+        <h2>date 타입</h2> 
+        	<label>날짜 선택</label>
+            <input type="date" name="uDate">
+            <br>
+            <input type="submit" value="전송">                   
+        <h2>datetime 타입</h2>
+        	<form action="#" method="get" name="newtype3">
+             <label>날짜 시간 선택</label>
+            <input type="datetime" name="uDate">
+            <br>
+            <input type="submit" value="전송">
+        <h2>datetime-local 타입(크롬만)</h2>
+        	<form action="#" method="get" name="newtype4">
+             <label>날짜 시간 선택</label>
+            <input type="datetime-local" name="uDate">
+            <br>
+            <input type="submit" value="전송">            
+        <h2>email 타입</h2>
+        	<form action="#" method="get" name="newtype5">
+             <label>이메일 입력</label>
+            <input type="email" name="uEmail">
+            <br>
+            <input type="submit" value="전송">  
+        <h2>mouth 타입</h2>
+        	<form action="#" method="get" name="newtype5">
+             <label>년월 선택</label>
+            <input type="mouth" name="uMouth">
+            <br>
+            <input type="submit" value="전송">    
+
+        <h2>number 타입</h2>
+        	<form action="#" method="get" name="newtype5">
+             <label>당신이 좋아하는 수 선택</label>
+            <input type="number" name="uNumber" min="0" max="10" step="2">
+            <br>
+            <input type="submit" value="전송">
+        <h2>range 타입</h2>
+        	<form action="#" method="get" name="newtype5">
+             <label>당신이 좋아하는 수 선택</label>
+            <input type="range" name="uRange" min="0" max="10" step="2" value="4" onChange="document.getElementById('result').innerHTML=this.value">
+            <span id="result"></span>
+            <br>
+            <input type="submit" value="전송">
+        <h2>search 타입</h2>
+        	<form action="#" method="get" name="newtype5">
+             <label>검색어</label>
+            <input type="search" name="uSearch">
+            <br>
+            <input type="submit" value="전송">
+        <h2>time 타입(크롬만)</h2>
+        	<form action="#" method="get" name="newtype5">
+             <label>시간</label>
+            <input type="time" name="uTime">
+            <br>
+            <input type="submit" value="전송">
+        <h2>url 타입(크롬만)</h2>
+        	<form action="#" method="get" name="newtype5">
+             <label>사이트 주소</label>
+            <input type="url" name="uUrl">
+            <br>
+            <input type="submit" value="전송">                                                                                                                    
+        </form>
+        
+        <h1>새로운 속성</h1>
+        <h2>autocomplete 속성</h2>
+        <form action="#" method="get" name="newAtt" autocomplete="off">
+        	<fieldset>
+            	<legend>회원가입</legend>
+                <label>이름</label>
+                <input type="text" name="uName">
+                <label>주소</label>
+                <input type="text" name="uAdd">                
+                <label>성별</label>
+                <input type="radio" name="uGen" value="male" id="g1">
+                <label for="g1">남자</label>
+                <input type="radio" name="uGen" value="female" id="g2">
+                <label for="g2">여자</label>
+            </fieldset>
+            	<input type="submit" value="보내기">
+        </form>
+    </article>
+    <article>
+    	<h1>새로운 폼대그 속성2</h1>
+        <h2>list 속성</h2>
+        <p>datalist 태그로 미리 목록을 정의해 놓고 그 목록 연결해서 보여주는 속성</p>
+        <input list="fruits" name="fruit">
+        <datalist id="fruits">
+        	<option value="바나나">
+            <option value="딸기">
+            <option value="포도">
+            <option value="사과">
+        </datalist>
+        <h2>기타 속성</h2>
+        <form action="#" method="get" name="etc">
+        	<label>이름</label>.
+            <input type="text" name="uname" placeholder="이름입력하세요" required><br>
+            <label>아이디</label>
+            <input type="text" name="uId" pattern="[a-z]{4}" palceholder="영소문자 4자만">
+            <input type="text" name="uId2" pattern="[a-z0-9]{6}" palceholder="영소문자와 숫자를 혼용하여 6자">
+            <input type="text" name="uId3" pattern="[a-za-z0-9]{4,8}" >
+            <span>영어 대소문자, 숫자 혼용하여 4~8까지 입력가능</span>
+            <label> 전화번호</label>
+            <input type="text" name="uTel" pattern=""
+            <br>
+            <input type="submit" value="보내기">
+         </form>                   
+    </article>    
+</section>
+
+
+</body>
+</html>
